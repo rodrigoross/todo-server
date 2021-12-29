@@ -2,12 +2,12 @@
 import { Router } from "express";
 
 // Impora as controladoras
-import { createTodo } from "../controllers/todos";
+import { createTodo, getTodos } from "../controllers/todos";
 
 const router = Router();
 
 router.post("/", createTodo);
-router.get("/");
+router.get("/", getTodos);
 router.patch("/:id");
 router.delete("/:id");
 

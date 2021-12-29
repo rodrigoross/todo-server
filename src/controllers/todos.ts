@@ -15,3 +15,9 @@ export const createTodo: RequestHandler = (req, res, next) => {
         created: newTodo,
     });
 };
+
+export const getTodos: RequestHandler = (req, res, next) => {
+    res.json({
+        todos: TODOS,
+    });
+};
