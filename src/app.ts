@@ -11,10 +11,8 @@ app.use(json());
 app.use("/todos", todoRoutes);
 
 // Redirecionamento em caso de erro. Usa middleware do Express.
-app.use((err: Error, req: Request, res: Response) => {
-    res.status(500).json({
-        message: err.message,
-    });
-});
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    res.status(500).json({ message: err.message });
+  });
 
 app.listen(3000);
