@@ -1,7 +1,7 @@
 // const express = require('express'); // Padrao JS
 import express, { Request, Response, NextFunction } from "express";
 
-import router from "./routes/todos";
+import todoRoutes from "./routes/todos";
 
 const app = express();
 
